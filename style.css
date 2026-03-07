@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(
+    circle at top,
+    #111827,
+    #0B0F14 70%
+  );
+  color: #E5E7EB;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* SIGNATURE NOISE */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* LOGO / NAME */
+.logo {
+  padding: 20px;
+  text-align: center;
+  color: #67E8F9;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.logo span {
+  color: #EC4899;
+}
+
+/* MAIN CONTAINER */
+.container {
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  background: linear-gradient(90deg, #E5E7EB, #9CA3AF);
+
+  background-clip: text;          
+  -webkit-background-clip: text;    
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Optional accent word */
+.gradient {
+  color: #67E8F9;
+}
+
+/* SUBTITLE */
+.subtitle {
+  color: #9CA3AF;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+}
+
+/* FLOATING ICON */
+.gears {
+  font-size: 2rem;
+  color: #9CA3AF;
+  opacity: 0.8;
+  animation: float 3s ease-in-out infinite, rotate 6s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* CARD */
+.card {
+  margin: 32px auto;
+  padding: 22px;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.75);
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  height: 6px;
+  background: #1F2937;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-bar span {
+  height: 100%;
+  display: block;
+  background: linear-gradient(90deg, #22D3EE, #48EC8F);
+  animation: load 1.8s ease forwards;
+}
+
+@keyframes load {
+  from { width: 0; }
+  to { width: 45%; }
+}
+
+/* DATE */
+.date {
+  color: #7b7f86;
+  font-size: 0.85rem;
+}
+
+/* COUNTDOWN */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.countdown div {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 14px;
+  border-radius: 12px;
+  width: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.countdown span {
+  font-size: 1.5rem;
+  color: #67E8F9;
+  font-weight: 600;
+}
+
+.countdown small {
+  display: block;
+  font-size: 0.7rem;
+  color: #9CA3AF;
+  margin-top: 2px;
+}
+
+/* SOCIALS */
+.socials a {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  opacity: 0.6;
+  color: #E5E7EB;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.social-icon{
+  width: 28px;
+  height: 28px;
+  filter: grayscale(1);
+  opacity: 0.8;
+}
+.social-icon:hover{
+  opacity: 1;
+}
+
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.72rem;
+  color: #6B7280;
+  opacity: 0.6;
+}
