@@ -24,4 +24,4 @@ This portfolio is part of my learning journey in web development where I build a
 Aditya Upadhyay
 
 GitHub: https://github.com/adityaupadhyay01  
-LinkedIn: (add your linkedin link here)
+LinkedIn: https://www.linkedin.com/in/aditya-upadhyay-7a372a2a7/
