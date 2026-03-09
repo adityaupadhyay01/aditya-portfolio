@@ -3,7 +3,7 @@
 Personal developer portfolio website built to showcase my projects, skills, and learning journey as a Computer Science student.
 
 ## 🔗 Live Website
-https://adityaupadhyayportfolio.netlify.app/
+https://aditya-portfolio-drab.vercel.app/
 
 ## 🛠 Tech Stack
 - HTML
