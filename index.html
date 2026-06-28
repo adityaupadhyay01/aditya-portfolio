@@ -1,16 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aditya Upadhyay — CS Student & Software Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Upadhyay — Developer Portfolio</title>
+  <meta name="description" content="CS student, full-stack web developer, and aspiring game developer." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <section class="hero" id="hero">
+ 
+    <!-- LEFT PANEL -->
+    <div class="hero-left">
+      <div class="hero-left-inner">
+ 
+        <!-- Profile image -->
+        <div class="avatar-wrap">
+          <img
+            src="profile.jpg"
+            alt="Aditya Upadhyay"
+            class="avatar-img"
+            width="112"
+            height="112"
+          />
+        </div>
+ 
+
+        <h1 class="name">
+          <span class="bracket">&lt;</span>ADITYA&nbsp;UPADHYAY<span class="bracket">/&gt;</span>
+        </h1>
+
+        <!-- Roles -->
+        <ul class="roles" aria-label="Roles">
+          <li>Building Digital Experiences</li>
+          <li>Learning AI & Game Development</li>
+          <li>Turning Ideas Into Reality</li>
+        </ul>
+
+        <!-- CTA -->
+        <a href="#contact" class="btn btn-primary scroll-link">Let's Connect</a>
+
+        <!-- Social links -->
+        <nav class="socials" aria-label="Social links">
+          <a href="https://github.com/" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <!-- GitHub icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.683-.104-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.641.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/aditya-upadhyay-in/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <!-- LinkedIn icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://leetcode.com/u/aditya_up_in/" target="_blank" rel="noopener" class="social-link" aria-label="LeetCode">
+            <!-- LeetCode icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+            </svg>
+            <span>LeetCode</span>
+          </a>
+
+          <a href="mailto:aditya@example.com" class="social-link" aria-label="Email">
+            <!-- Email icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <span>Email</span>
+          </a>
+        </nav>
+
+      </div>
+    </div><!-- /hero-left -->
+
+    <!-- RIGHT PANEL -->
+    <div class="hero-right">
+      <div class="hero-right-inner">
+
+        <!-- Section heading in developer syntax -->
+        <h2 class="section-heading">&lt;/About Me&gt;</h2>
+
+        <div class="about-text">
+          <p>
+            I'm Aditya — a Computer Science Engineering student with a slightly unusual origin story for a developer: it starts with GTA Vice City. 
+            As a kid, I didn't just play games, I kept wondering <em>how they were actually made</em>. 
+            That curiosity never left, and it slowly became the reason I write code.
+          </p>
+          <p>
+            Today I work on full-stack web applications, dig into DSA problems, and stay curious about AI and emerging tech. 
+            But the long game? Becoming a game developer — ideally at Rockstar Games. 
+            I know that goal demands serious programming chops, maths, graphics knowledge, and real engineering experience. 
+            So instead of rushing it, I'm building a strong foundation first.
+          </p>
+          <p>
+            Right now I'm sharpening my skills in web development, data structures & algorithms, Java, and machine learning — treating every project I ship today as a step toward the games I want to build tomorrow.
+          </p>
+          <p>
+            Outside of screens: cricket, books, gaming, and exploring ideas that make me think.
+          </p>
+          <p class="about-cta-line">
+            I'm currently looking for internship opportunities where I can learn alongside experienced developers and contribute to real products.
+          </p>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="action-btns">
+          <a href="#" class="btn btn-outline" aria-label="Download Resume">Resume</a>
+          <a href="#projects" class="btn btn-primary scroll-link">Projects</a>
+        </div>
+
+      </div>
+    </div><!-- /hero-right -->
+
+  </section><!-- /hero -->
+
+
+  <!-- ======================================================
+       SKILLS
+  ====================================================== -->
+  <section class="section section-skills" id="skills">
+    <div class="container">
+
+      <div class="section-label">Skills</div>
+
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Frontend</h3>
+          <ul class="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Programming</h3>
+          <ul class="skill-list">
+            <li>Java</li>
+            <li>C</li>
+            <li>Python <span class="tag">Learning</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Backend</h3>
+          <ul class="skill-list">
+            <li>Node.js</li>
+            <li>Express.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Database</h3>
+          <ul class="skill-list">
+            <li>MongoDB</li>
+          </ul>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Tools</h3>
+          <ul class="skill-list">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Exploring</h3>
+          <ul class="skill-list">
+            <li>Machine Learning</li>
+            <li>Artificial Intelligence</li>
+            <li>Game Development</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- /skills -->
+
+
+  <!-- ======================================================
+       PROJECTS
+  ====================================================== -->
+  <section class="section section-projects" id="projects">
+    <div class="container">
+
+      <div class="section-label">Projects</div>
+
+      <div class="projects-grid">
+
+        <!-- Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder" aria-label="Bookmark Manager screenshot placeholder">
+              <span class="img-label">Project Image</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Bookmark Manager</h3>
+            <p class="project-desc">A responsive bookmark manager featuring dark mode, drag & drop reordering, category organisation, and persistent local storage.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.683-.104-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.641.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="project-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H7v14h14v-7h2v7c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h7zm7 0v6h-2V6.41l-7.29 7.3-1.42-1.42L18.59 5H16V3h5z"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder" aria-label="Portfolio Website screenshot placeholder">
+              <span class="img-label">Project Image</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-desc">A personal responsive portfolio — the very site you're looking at. Designed from scratch with attention to typography, layout, and subtle animation.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.683-.104-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.641.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-education" id="education">
+    <div class="container">
+
+      <div class="section-label">Education</div>
+
+      <div class="education-card reveal">
+        <div class="edu-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3 1 9l4 2.18V15c0 1.68 3.13 3 7 3s7-1.32 7-3v-3.82L23 9 12 3zm0 2.27L20.13 9 12 12.73 3.87 9 12 5.27zM19 14.82V15c0 .87-2.87 2-7 2s-7-1.13-7-2v-.18L12 17l7-2.18z"/>
+          </svg>
+        </div>
+        <div class="edu-body">
+          <p class="edu-degree">Bachelor of Technology</p>
+          <p class="edu-field">Computer Science Engineering</p>
+          <p class="edu-status">Currently Pursuing</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section-contact" id="contact">
+    <div class="container">
+
+      <div class="section-label">Contact</div>
+
+      <div class="contact-inner reveal">
+        <h2 class="contact-heading">Let's build something amazing together.</h2>
+        <p class="contact-sub">Whether it's a collab, an internship, or just a good conversation my inbox is open.</p>
+
+        <div class="contact-links">
+          <a href="mailto:upadhyayaditya432@gmail.com" class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Email
+          </a>
+          <a href="https://www.linkedin.com/in/aditya-upadhyay-in/" target="_blank" rel="noopener" class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/adityaupadhyay01" target="_blank" rel="noopener" class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.683-.104-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.641.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by <strong>Aditya Upadhyay</strong></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
