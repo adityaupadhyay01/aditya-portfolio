@@ -1,7 +1,3 @@
-/* ======================================================
-   ROOT & RESET
-====================================================== */
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -47,11 +43,6 @@ ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 
-
-/* ======================================================
-   TYPOGRAPHY HELPERS
-====================================================== */
-
 .section-label {
   font-family: var(--font-display);
   font-size: 0.7rem;
@@ -71,11 +62,6 @@ img { max-width: 100%; display: block; }
   color: var(--color-primary);
   margin-bottom: 2rem;
 }
-
-
-/* ======================================================
-   BUTTONS
-====================================================== */
 
 .btn {
   display: inline-flex;
@@ -126,11 +112,6 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
   margin-top: 2.5rem;
 }
-
-
-/* ======================================================
-   HERO — SPLIT SCREEN
-====================================================== */
 
 .hero {
   min-height: 100vh;
@@ -245,7 +226,6 @@ img { max-width: 100%; display: block; }
   transform: translateX(3px);
 }
 
-/* RIGHT */
 .hero-right {
   width: 58%;
   background: var(--bg-right);
@@ -259,7 +239,6 @@ img { max-width: 100%; display: block; }
   animation: fadeInUp 0.8s 0.15s ease both;
 }
 
-/* About text */
 .about-text p {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -279,11 +258,6 @@ img { max-width: 100%; display: block; }
   font-weight: 500 !important;
 }
 
-
-/* ======================================================
-   SECTIONS (shared)
-====================================================== */
-
 .section {
   padding: 6rem 0;
 }
@@ -298,11 +272,6 @@ img { max-width: 100%; display: block; }
 .section-projects  { background: var(--bg-right); border-top: 1px solid var(--color-border); }
 .section-education { background: var(--bg-left); border-top: 1px solid var(--color-border); }
 .section-contact   { background: var(--color-primary); border-top: 1px solid var(--color-border); }
-
-
-/* ======================================================
-   SKILLS
-====================================================== */
 
 .skills-grid {
   display: grid;
@@ -361,11 +330,6 @@ img { max-width: 100%; display: block; }
   border-radius: 9999px;
 }
 
-
-/* ======================================================
-   PROJECTS
-====================================================== */
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -388,7 +352,6 @@ img { max-width: 100%; display: block; }
   transform: translateY(-4px);
 }
 
-/* Placeholder image */
 .project-img-wrap {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -480,11 +443,6 @@ img { max-width: 100%; display: block; }
   transform: translateY(-1px);
 }
 
-
-/* ======================================================
-   EDUCATION
-====================================================== */
-
 .education-card {
   display: flex;
   align-items: flex-start;
@@ -527,7 +485,15 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-body);
   font-size: 0.9rem;
   color: #4b5563;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.edu-university {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: 0.6rem;
 }
 
 .edu-status {
@@ -541,11 +507,6 @@ img { max-width: 100%; display: block; }
   padding: 0.2rem 0.65rem;
   border-radius: 9999px;
 }
-
-
-/* ======================================================
-   CONTACT
-====================================================== */
 
 .section-contact .section-label {
   color: rgba(255,255,255,0.45);
@@ -602,11 +563,6 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 
-
-/* ======================================================
-   FOOTER
-====================================================== */
-
 .footer {
   background: #0a0a0a;
   padding: 1.5rem 0;
@@ -624,11 +580,6 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
 }
 
-
-/* ======================================================
-   ANIMATIONS
-====================================================== */
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -640,7 +591,6 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* Reveal on scroll */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -652,7 +602,6 @@ img { max-width: 100%; display: block; }
   transform: translateY(0);
 }
 
-/* Staggered reveal for grids */
 .skill-group:nth-child(1)  { transition-delay: 0.05s; }
 .skill-group:nth-child(2)  { transition-delay: 0.10s; }
 .skill-group:nth-child(3)  { transition-delay: 0.15s; }
@@ -664,7 +613,6 @@ img { max-width: 100%; display: block; }
 .project-card:nth-child(2) { transition-delay: 0.15s; }
 .project-card:nth-child(3) { transition-delay: 0.25s; }
 
-/* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -672,12 +620,6 @@ img { max-width: 100%; display: block; }
   }
 }
 
-
-/* ======================================================
-   RESPONSIVE
-====================================================== */
-
-/* Tablet (≤ 900px) */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -708,7 +650,6 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* Mobile (≤ 600px) */
 @media (max-width: 600px) {
   .hero-left,
   .hero-right {
@@ -760,3 +701,168 @@ img { max-width: 100%; display: block; }
     grid-template-columns: 1fr;
   }
 }
+
+[data-theme="dark"] {
+  --color-primary:   #efefef;
+  --color-muted:     #888888;
+  --color-border:    #2a2a2a;
+  --color-tag-bg:    #1f1f1f;
+  --color-tag-text:  #aaaaaa;
+  --bg-left:         #111111;
+  --bg-right:        #0d0d0d;
+}
+
+body,
+.hero-left,
+.hero-right,
+.section-skills,
+.section-projects,
+.section-education,
+.footer,
+.skill-group,
+.project-card,
+.education-card,
+.social-link,
+.btn,
+.name,
+.roles li,
+.about-text p,
+.section-label,
+.section-heading,
+.contact-heading,
+.contact-sub {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] body {
+  background: var(--bg-right);
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .hero-left  { background: var(--bg-left); border-color: var(--color-border); }
+[data-theme="dark"] .hero-right { background: var(--bg-right); }
+
+[data-theme="dark"] .name    { color: var(--color-primary); }
+[data-theme="dark"] .bracket { color: var(--color-muted); }
+
+/* Roles */
+[data-theme="dark"] .roles li { color: var(--color-muted); }
+
+/* About text */
+[data-theme="dark"] .about-text p { color: #b0b0b0; }
+[data-theme="dark"] .about-text em { color: var(--color-primary); }
+[data-theme="dark"] .about-cta-line { color: var(--color-primary) !important; }
+
+/* Section labels & headings */
+[data-theme="dark"] .section-heading { color: var(--color-primary); }
+[data-theme="dark"] .section-label   { color: var(--color-muted); }
+
+/* Buttons */
+[data-theme="dark"] .btn-primary {
+  background: #efefef;
+  color: #111;
+  border-color: #efefef;
+}
+[data-theme="dark"] .btn-primary:hover {
+  background: #fff;
+  border-color: #fff;
+}
+[data-theme="dark"] .btn-outline {
+  color: var(--color-primary);
+  border-color: var(--color-border);
+}
+[data-theme="dark"] .btn-outline:hover {
+  background: #efefef;
+  color: #111;
+}
+
+/* Social links */
+[data-theme="dark"] .social-link       { color: var(--color-muted); }
+[data-theme="dark"] .social-link:hover { background: #1f1f1f; color: var(--color-primary); }
+
+/* Sections */
+[data-theme="dark"] .section-skills    { background: #111111; border-color: var(--color-border); }
+[data-theme="dark"] .section-projects  { background: #0d0d0d; border-color: var(--color-border); }
+[data-theme="dark"] .section-education { background: #111111; border-color: var(--color-border); }
+
+/* Skill cards */
+[data-theme="dark"] .skill-group {
+  background: #1a1a1a;
+  border-color: var(--color-border);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] .skill-group-title { color: var(--color-muted); }
+[data-theme="dark"] .skill-list li     { color: var(--color-primary); }
+[data-theme="dark"] .tag {
+  background: #2a2a2a;
+  color: #aaa;
+}
+
+[data-theme="dark"] .project-card {
+  background: #1a1a1a;
+  border-color: var(--color-border);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] .project-title { color: var(--color-primary); }
+[data-theme="dark"] .project-desc  { color: var(--color-muted); }
+[data-theme="dark"] .project-tags span {
+  background: #2a2a2a;
+  color: #aaa;
+}
+[data-theme="dark"] .project-img-placeholder { background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%); }
+[data-theme="dark"] .img-label { color: #555; }
+[data-theme="dark"] .project-link       { color: var(--color-muted); }
+[data-theme="dark"] .project-link:hover { color: var(--color-primary); }
+
+[data-theme="dark"] .education-card {
+  background: #1a1a1a;
+  border-color: var(--color-border);
+}
+[data-theme="dark"] .edu-degree     { color: var(--color-primary); }
+[data-theme="dark"] .edu-field      { color: #b0b0b0; }
+[data-theme="dark"] .edu-university { color: var(--color-muted); }
+[data-theme="dark"] .edu-status     { background: #2a2a2a; color: #aaa; }
+[data-theme="dark"] .edu-icon       { background: #efefef; color: #111; }
+
+/* Contact section stays dark — just tweak opacity of sub-text */
+[data-theme="dark"] .contact-sub { color: rgba(255,255,255,0.45); }
+
+/* Footer */
+[data-theme="dark"] .footer {
+  background: #0a0a0a;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 1.5rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition:
+    background 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease,
+    transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: rotate(20deg);
+}
+
+.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }

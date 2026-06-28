@@ -84,3 +84,36 @@ window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(setHeroLeftHeight, 120);
 });
+
+/* ======================================================
+   THEME TOGGLER — paste at the bottom of script.js
+   Saves preference to localStorage so it persists
+   across page refreshes.
+====================================================== */
+
+(function () {
+  const STORAGE_KEY = 'au-theme';
+  const html        = document.documentElement;
+  const btn         = document.getElementById('themeToggle');
+
+  // Apply saved theme immediately on load (before paint)
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved === 'dark') html.setAttribute('data-theme', 'dark');
+
+  // Toggle on click
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const isDark = html.getAttribute('data-theme') === 'dark';
+
+      if (isDark) {
+        html.removeAttribute('data-theme');
+        localStorage.setItem(STORAGE_KEY, 'light');
+        btn.setAttribute('aria-label', 'Switch to dark mode');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem(STORAGE_KEY, 'dark');
+        btn.setAttribute('aria-label', 'Switch to light mode');
+      }
+    });
+  }
+})();
