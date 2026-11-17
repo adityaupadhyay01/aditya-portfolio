@@ -1,0 +1,103 @@
+/* ============================================================
+   KHELIFIED — game chrome and hero
+   Loaded after khelified.css, so these win where both speak.
+============================================================ */
+
+/* ---------- centre logo, icon dock, section rail ---------- */
+.kf-logo {
+  position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 60;
+  font-family: var(--kf-pixel); font-weight: 700;
+  font-size: clamp(24px, 3.2vw, 44px); letter-spacing: 0.04em; line-height: 1;
+  color: var(--kf-lime); text-decoration: none;
+  text-shadow: 4px 4px 0 rgba(206, 255, 0, 0.22);
+}
+.kf-dock {
+  position: fixed; left: 26px; bottom: 26px; z-index: 60;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.kf-dock a { color: #ffc531; display: grid; place-content: center; }
+.kf-dock a:hover, .kf-dock a:focus-visible { color: var(--kf-lime); }
+.kf-rail {
+  position: fixed; right: 26px; top: 50%; transform: translateY(-50%); z-index: 60;
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+}
+.kf-rail-dot {
+  width: 28px; height: 28px; display: grid; place-content: center;
+  background: none; border: 0; padding: 0; cursor: pointer; color: #ffc531;
+}
+.kf-rail-dot span { width: 8px; height: 8px; background: #ffc531; }
+.kf-rail-dot:hover span { background: var(--kf-lime); }
+.kf-dock a:focus-visible, .kf-rail-dot:focus-visible, .kf-mode:focus-visible,
+.kf-logo:focus-visible { outline: 2px solid var(--kf-lime); outline-offset: 4px; }
+
+/* ---------- hero: avatar with speech bubble | headline + mode select ---------- */
+.kf-hero {
+  min-height: 100svh;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: end; justify-content: initial; gap: 4vw;
+  padding: 90px 9vw 0; text-align: left;
+}
+.kf-hero-avatar { position: relative; align-self: end; display: flex; justify-content: center; }
+.kf-bust { display: block; width: min(100%, 78svh); height: auto; image-rendering: pixelated; }
+.kf-bubble {
+  position: absolute; top: -4%; left: 50%; z-index: 2;
+  min-width: 5.2em; padding: 10px 20px;
+  background: var(--kf-ink); color: var(--kf-lime);
+  font-family: var(--kf-pixel); font-size: clamp(22px, 2.6vw, 40px); white-space: nowrap;
+}
+/* the bubble's tail: three stepped squares */
+.kf-bubble::after {
+  content: ''; position: absolute; left: 62%; bottom: -24px; width: 8px; height: 8px;
+  background: var(--kf-white);
+  box-shadow: 8px 0 0 var(--kf-white), 8px 8px 0 var(--kf-white);
+}
+.kf-hero-copy { position: relative; align-self: center; padding-bottom: 8svh; }
+/* the pixel cursor trail (cursor.js): above everything, inverting what it crosses */
+.kf-trail {
+  position: fixed; inset: 0; z-index: 999;
+  width: 100vw; height: 100svh;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+.kf-hero-headline {
+  position: relative; z-index: 1; max-width: 17ch;
+  /* a sentence, not a slogan: smaller than the old three-word line */
+  font-size: clamp(32px, 4vw, 64px); line-height: 1.08;
+}
+.kf-lead {
+  position: relative; z-index: 1; margin-top: 22px;
+  font-family: var(--kf-head); font-size: clamp(15px, 1.3vw, 20px); color: #e2e2e2;
+}
+.kf-modes { position: relative; z-index: 1; margin-top: 30px; display: flex; flex-direction: column; gap: 12px; }
+.kf-mode {
+  display: inline-flex; align-items: center; gap: 12px; align-self: flex-start;
+  font-family: var(--kf-pixel); font-size: clamp(18px, 1.7vw, 26px);
+  color: var(--kf-white); text-decoration: none;
+}
+.kf-mode-arrow { visibility: hidden; color: var(--kf-lime); }
+.kf-mode[data-on="true"] { color: var(--kf-lime); }
+.kf-mode[data-on="true"] .kf-mode-arrow { visibility: visible; }
+
+.kf-player .kf-card { width: min(560px, 100%); }
+
+@media (max-width: 860px) {
+  .kf-hero { grid-template-columns: 1fr; padding: 96px 24px 0; gap: 28px; }
+  .kf-hero-copy { order: -1; padding-bottom: 0; }
+  .kf-bust { width: min(78%, 46svh); }
+  /* No side margins to spare here: the rail is dropped (scrolling does its
+     job) and the dock becomes a bar of its own along the bottom, with a
+     background, instead of floating over the text. */
+  .kf-rail { display: none; }
+  .kf-dock {
+    left: 50%; bottom: 12px; transform: translateX(-50%);
+    flex-direction: row; gap: 22px;
+    padding: 10px 18px;
+    background: var(--kf-ink);
+    box-shadow: 0 0 0 2px #ffc531;
+  }
+  .kf { padding-bottom: 76px; }   /* room for the bar, so it never hides the footer */
+}
+@media (pointer: coarse) {
+  .kf-dock a, .kf-rail-dot { min-width: 44px; min-height: 44px; }
+  .kf-mode { min-height: 44px; }
+}
