@@ -103,7 +103,7 @@ export default function Khelified() {
       <nav className="kf-dock" aria-label="Shortcuts">
         <SoundToggle />
         <a href="/kahani" title="The documentary" aria-label="The documentary"><Pixel rows={ART.book} size={4} /></a>
-        <a href="/khelified/game" title="Play Bug Run" aria-label="Play Bug Run"><Pixel rows={ART.pad} size={4} /></a>
+        <a href="/khelified/game" title="Play Keeda Bhag" aria-label="Play Keeda Bhag"><Pixel rows={ART.pad} size={4} /></a>
         <a href="/kahani/explore" title="Explore rooms" aria-label="Explore rooms"><Pixel rows={ART.door} size={4} /></a>
         {email && <a href={email.href} title="Email" aria-label="Email"><Pixel rows={ART.mail} size={4} /></a>}
       </nav>

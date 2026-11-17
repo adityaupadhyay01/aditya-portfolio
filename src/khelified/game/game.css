@@ -43,3 +43,18 @@
 }
 .kg-back { color: var(--kf-lime); font-size: 15px; }
 .kg-back:focus-visible { outline: 2px solid var(--kf-lime); outline-offset: 3px; }
+
+.kg-title { max-width: 16ch; line-height: 1.1; }
+.kg-hint { max-width: 34ch; font-size: 16px; color: #d0d0d0; }
+
+/* pickup toast: top-right of the stage, pops in hard steps and is gone in 1.6s */
+.kg-toast {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  padding: 6px 12px;
+  background: #ffc531; color: var(--kf-ink);
+  font-size: 15px; font-weight: 700;
+  pointer-events: none;
+  animation: kg-pop 0.2s steps(3);
+}
+@keyframes kg-pop { from { transform: translateY(-8px); opacity: 0; } }
+[data-motion="off"] .kg-toast { animation: none; }

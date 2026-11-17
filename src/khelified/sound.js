@@ -53,6 +53,9 @@ const SFX = {
   power:   () => tone('sawtooth', 900, 120, 0.3, 0.35),
   pickup:  () => { tone('square', 880, 0, 0.06, 0.4); tone('square', 1320, 0, 0.1, 0.4, 0.06); },
   hit:     () => tone('sawtooth', 220, 40, 0.4, 0.55),
+  fire:    () => tone('square', 1200, 300, 0.07, 0.3),
+  boss:    () => { tone('sawtooth', 110, 0, 0.25, 0.5); tone('sawtooth', 82, 0, 0.4, 0.5, 0.25); },
+  kill:    () => [523, 659, 784, 1047].forEach((f, i) => tone('square', f, 0, 0.1, 0.4, i * 0.08)),
 };
 
 export function sfx(name) {
