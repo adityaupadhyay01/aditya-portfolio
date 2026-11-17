@@ -8,6 +8,8 @@ import Pixel, { ART, BUST } from './Pixel.jsx';
 import { CTA, HERO, PLAYER } from './content.js';
 import { startSections } from './sections.js';
 import { startCursorTrail } from './cursor.js';
+import SoundToggle from './SoundToggle.jsx';
+import { sfx } from './sound.js';
 import { LANDING } from '../content/landing.js';
 import { LINKS } from '../content/links.js';
 import { ROOMS } from '../content/rooms.js';
@@ -71,8 +73,8 @@ export default function Khelified() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const jump = i => rootRef.current.querySelector('.' + SECTIONS[i][0])
-    ?.scrollIntoView({ behavior: motionOn() ? 'smooth' : 'auto' });
+  const jump = i => (sfx('open'), rootRef.current.querySelector('.' + SECTIONS[i][0])
+    ?.scrollIntoView({ behavior: motionOn() ? 'smooth' : 'auto' }));
 
   /* The mode list works like a game menu: up/down move, Enter opens.
      Focus follows the arrows only - hovering must not steal focus. */
@@ -82,6 +84,7 @@ export default function Khelified() {
     e.preventDefault();
     const next = (mode + step + modes.length) % modes.length;
     setMode(next);
+    sfx('blip');
     e.currentTarget.querySelectorAll('.kf-mode')[next]?.focus();
   }
 
@@ -98,7 +101,9 @@ export default function Khelified() {
       <a className="kf-logo" href="/khelified" ref={logoRef} aria-label="adithegreat, khelified">ADITHEGREAT</a>
 
       <nav className="kf-dock" aria-label="Shortcuts">
+        <SoundToggle />
         <a href="/kahani" title="The documentary" aria-label="The documentary"><Pixel rows={ART.book} size={4} /></a>
+        <a href="/khelified/game" title="Play Bug Run" aria-label="Play Bug Run"><Pixel rows={ART.pad} size={4} /></a>
         <a href="/kahani/explore" title="Explore rooms" aria-label="Explore rooms"><Pixel rows={ART.door} size={4} /></a>
         {email && <a href={email.href} title="Email" aria-label="Email"><Pixel rows={ART.mail} size={4} /></a>}
       </nav>
@@ -134,7 +139,8 @@ export default function Khelified() {
               {modes.map(([key, room], i) => (
                 <a key={key} className="kf-mode" data-on={i === mode} href={'/kahani#' + key}
                    tabIndex={i === mode ? 0 : -1}
-                   onMouseEnter={() => setMode(i)} onFocus={() => setMode(i)}>
+                   onMouseEnter={() => { if (i !== mode) sfx('blip'); setMode(i); }} onFocus={() => setMode(i)}
+                   onClick={() => sfx('select')}>
                   <Pixel rows={ART.play} size={4} className="kf-mode-arrow" />
                   {room.title} Mode
                 </a>

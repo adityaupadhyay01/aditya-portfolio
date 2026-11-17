@@ -15,7 +15,10 @@
   position: fixed; left: 26px; bottom: 26px; z-index: 60;
   display: flex; flex-direction: column; gap: 18px;
 }
-.kf-dock a { color: #ffc531; display: grid; place-content: center; }
+.kf-dock a, .kf-sound { color: #ffc531; display: grid; place-content: center; }
+.kf-sound { background: none; border: 0; padding: 0; cursor: pointer; }
+.kf-sound[aria-pressed="true"], .kf-sound:hover { color: var(--kf-lime); }
+.kf-sound:focus-visible { outline: 2px solid var(--kf-lime); outline-offset: 4px; }
 .kf-dock a:hover, .kf-dock a:focus-visible { color: var(--kf-lime); }
 .kf-rail {
   position: fixed; right: 26px; top: 50%; transform: translateY(-50%); z-index: 60;
@@ -38,7 +41,9 @@
   padding: 90px 9vw 0; text-align: left;
 }
 .kf-hero-avatar { position: relative; align-self: end; display: flex; justify-content: center; }
-.kf-bust { display: block; width: min(100%, 78svh); height: auto; image-rendering: pixelated; }
+/* No image-rendering: pixelated here - the art is drawn large and shown
+   smaller, and nearest-neighbour downscaling makes the pixels uneven. */
+.kf-bust { display: block; width: min(100%, 78svh); height: auto; }
 .kf-bubble {
   position: absolute; top: -4%; left: 50%; z-index: 2;
   min-width: 5.2em; padding: 10px 20px;
@@ -98,6 +103,6 @@
   .kf { padding-bottom: 76px; }   /* room for the bar, so it never hides the footer */
 }
 @media (pointer: coarse) {
-  .kf-dock a, .kf-rail-dot { min-width: 44px; min-height: 44px; }
+  .kf-dock a, .kf-sound, .kf-rail-dot { min-width: 44px; min-height: 44px; }
   .kf-mode { min-height: 44px; }
 }

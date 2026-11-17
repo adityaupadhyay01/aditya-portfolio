@@ -13,6 +13,7 @@
 ============================================================ */
 export const KAHANI = '/kahani';
 export const KHELIFIED_PATH = '/khelified';
+export const KHELIFIED_GAME = '/khelified/game';
 
 export const KNOWN_PATHS = [
   '/kahani',

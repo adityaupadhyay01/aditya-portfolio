@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { engine, startExperience, whenReady } from './experience/engine.js';
-import { KAHANI, KHELIFIED_PATH, cleanPath, isKnownPath } from './content/routes.js';
+import { KAHANI, KHELIFIED_GAME, KHELIFIED_PATH, cleanPath, isKnownPath } from './content/routes.js';
 import CodeBackdrop from './components/CodeBackdrop.jsx';
 import Story from './components/Story.jsx';
 import Explore from './components/Explore.jsx';
@@ -14,6 +14,7 @@ import Landing from './components/Landing.jsx';
 /* Its own chunk: fonts, styles and code for /khelified are fetched only
    when someone actually opens /khelified. */
 const Khelified = lazy(() => import('./khelified/Khelified.jsx'));
+const KhelifiedGame = lazy(() => import('./khelified/game/GamePage.jsx'));
 
 /* Read before anything can rewrite it: the engine replaces the path as the
    visitor scrolls. On file:// the pathname is a disk path, so routing is
@@ -29,7 +30,8 @@ if (IS_WEB && cleanPath(window.location.pathname) === '/' && HAS_ROOM_HASH) {
 
 const INITIAL_PATH = window.location.pathname;
 const PATH = IS_WEB ? cleanPath(INITIAL_PATH) : '/';
-const IS_KHELIFIED = PATH === KHELIFIED_PATH;
+const IS_GAME = PATH === KHELIFIED_GAME;
+const IS_KHELIFIED = PATH === KHELIFIED_PATH || IS_GAME;
 const IS_404 = PATH !== '/' && !IS_KHELIFIED && !isKnownPath(PATH);
 
 /* A /kahani/today link opens at Today, not at the 2015 intro. Used once:
@@ -81,6 +83,7 @@ export default function App() {
     setEntered(true);
   }
 
+  if (IS_GAME) return <Suspense fallback={null}><KhelifiedGame /></Suspense>;
   if (IS_KHELIFIED) return <Suspense fallback={null}><Khelified /></Suspense>;
   if (IS_404) return <NotFound path={INITIAL_PATH} />;
 

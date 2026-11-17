@@ -1,9 +1,9 @@
 /* ============================================================
    LANDING — the frame before the story starts
 
-   AVATAR: drop your file at  public/avatar.png  (or point `avatar`
-   somewhere else). Until that file exists the page draws a marked
-   placeholder instead. Nothing here invents a likeness.
+   AVATAR: public/avatar.webp - your pixel portrait, background removed.
+   If the file goes missing, the landing falls back to your initials and
+   /khelified to a generic pixel bust. Nothing here invents a likeness.
 
    Every string below already existed somewhere in this project:
      name  -> <meta name="author">, the footer signature
@@ -21,7 +21,7 @@ export const LANDING = {
   role: 'CS Student · Full Stack Developer · AI Builder',
   line: 'Still building. Still learning. Still curious.',
   mark: 'Still curious',
-  avatar: '/avatar.png',
+  avatar: '/avatar.webp',
 
   /* Your words, kept exactly. Note: "it's" means "it is" - the
      possessive is "its". One character if you want it changed. */

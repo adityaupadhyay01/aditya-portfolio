@@ -30,11 +30,12 @@ export const ART = {
   book: ['XXXX.XXXX', 'X..XXX..X', 'X..XXX..X', 'X..XXX..X', 'X..XXX..X', 'XXXXXXXXX', '....X....'],
   door: ['XXXXXXX', 'X.....X', 'X.....X', 'X...X.X', 'X.....X', 'X.....X', 'XXXXXXX'],
   mail: ['XXXXXXXXX', 'XX.....XX', 'X.X...X.X', 'X..X.X..X', 'X...X...X', 'X.......X', 'XXXXXXXXX'],
+  pad: ['.XXXXXXX.', 'XX.XXX.XX', 'X...X.X.X', 'XX.XXX.XX', 'XXX...XXX', 'XX.....XX'],
   /* section-rail marker: a little lander */
   ship: ['..X..', '.XXX.', 'XXXXX', 'XX.XX', 'X...X'],
 };
 
-/* An original pixel bust, shown until public/avatar.png exists. It is not
+/* An original pixel bust, shown only if public/avatar.webp fails to load. It is not
    a likeness of anyone - replace it with your own art when you have it. */
 export const BUST = {
   palette: { H: '#2a1d14', S: '#c98d62', D: '#a86f48', E: '#121212', W: '#ffffff', M: '#7a2e2e', K: '#2b2b33', C: '#ceff00' },

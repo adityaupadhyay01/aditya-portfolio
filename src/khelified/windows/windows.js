@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PROMPT } from '../content.js';
+import { sfx } from '../sound.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -109,6 +110,7 @@ export function startWindows({ section, desktop, headerEl, motion }) {
     e.preventDefault();
     if (busy) return;
     busy = true;
+    sfx('deny');
     textEl.textContent  = closing ? PROMPT.cantClose : PROMPT.denied;
     labelEl.textContent = PROMPT.deniedLabel;
     gsap.set(bars(), { backgroundColor: 'var(--kf-secondary)' });
@@ -133,6 +135,7 @@ export function startWindows({ section, desktop, headerEl, motion }) {
     e.preventDefault();
     if (busy) return;
     busy = true;
+    sfx('grant');
     const href = e.currentTarget.getAttribute('href');
     textEl.textContent  = PROMPT.granted;
     labelEl.textContent = PROMPT.grantedLabel;
